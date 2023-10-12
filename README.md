@@ -1,3 +1,9 @@
+```
+mvn clean install
+```
+
+
+
 gwt-maven-springboot-archetype
 ==============================
 

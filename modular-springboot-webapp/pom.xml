@@ -18,13 +18,13 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>com.github.nalukit.archetype</groupId>
+    <groupId>io.github.sogis.archetype</groupId>
     <artifactId>gwt-maven-springboot-archetype</artifactId>
-    <version>HEAD-SNAPSHOT</version>
+    <version>0.1.0-SNAPSHOT</version>
   </parent>
 
   <artifactId>modular-springboot-webapp</artifactId>
-  <version>HEAD-SNAPSHOT</version>
+  <version>0.1.0-SNAPSHOT</version>
   <packaging>maven-archetype</packaging>
 
   <name>GWT Modular SpringBoot WebApp Archetype - with example code + GWT-RPC</name>

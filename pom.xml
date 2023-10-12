@@ -16,12 +16,12 @@
 --><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.github.nalukit.archetype</groupId>
+  <groupId>io.github.sogis.archetype</groupId>
   <artifactId>gwt-maven-springboot-archetype</artifactId>
-  <version>HEAD-SNAPSHOT</version>
+  <version>0.1.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
-  <url>https://github.com/nalukit/gwt-maven-springboot-archetype</url>
+  <url>https://github.com/sogis/gwt-maven-springboot-archetype</url>
 
   <inceptionYear>2020</inceptionYear>
   <licenses>
@@ -50,6 +50,10 @@
       <name>Frank Hossfeld</name>
       <email>info@nalu-solutions.de</email>
     </contributor>
+    <contributor>
+      <name>Stefan Ziegler</name>
+      <email>edi.gonzales@gmail.com</email>
+    </contributor>
   </contributors>
 
   <modules>
@@ -58,13 +62,13 @@
   </modules>
 
   <scm>
-    <connection>scm:git:git://github.com/nalukit/gwt-maven-springboot-archetype.git</connection>
-    <developerConnection>scm:git:git@github.com:nalukit/gwt-maven-springboot-archetype.git</developerConnection>
-    <url>https://github.com/nalukit/gwt-maven-springboot-archetype</url>
+    <connection>scm:git:git://github.com/sogis/gwt-maven-springboot-archetype.git</connection>
+    <developerConnection>scm:git:git@github.com:sogis/gwt-maven-springboot-archetype.git</developerConnection>
+    <url>https://github.com/sogis/gwt-maven-springboot-archetype</url>
   </scm>
   <issueManagement>
     <system>GitHub</system>
-    <url>https://github.com/nalukit/gwt-maven-springboot-archetype/issues</url>
+    <url>https://github.com/sogis/gwt-maven-springboot-archetype/issues</url>
   </issueManagement>
 
   <properties>
@@ -74,7 +78,7 @@
   <distributionManagement>
     <snapshotRepository>
       <id>ossrh</id>
-      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+      <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
     </snapshotRepository>
   </distributionManagement>
   <build>
@@ -94,8 +98,8 @@
         <version>1.6.13</version>
         <configuration>
           <serverId>ossrh</serverId>
-          <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-          <autoReleaseAfterClose>true</autoReleaseAfterClose>
+          <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
+          <autoReleaseAfterClose>false</autoReleaseAfterClose>
         </configuration>
         <!-- Note: "manual" configuration (no "extensions=true") to prevent
              flatten-m-p from including the plugin in deployment POMs -->
