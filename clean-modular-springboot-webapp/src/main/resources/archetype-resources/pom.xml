@@ -96,8 +96,8 @@
     </pluginManagement>
   </build>
   <modules>
-    <module>basic-webapp-client</module>
-    <module>basic-webapp-shared</module>
-    <module>basic-webapp-server</module>
+    <module>${rootArtifactId}-client</module>
+    <module>${rootArtifactId}-shared</module>
+    <module>${rootArtifactId}-server</module>
   </modules>
 </project>

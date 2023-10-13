@@ -1,6 +1,19 @@
+Archetypes lokal installieren:
+
 ```
-mvn clean install
+./mvnw clean install archetype:update-local-catalog
 ```
+
+Projekt mittels lokalem Archetype erzeugen:
+
+```
+mvn archetype:generate \
+       -DarchetypeCatalog=local \
+       -DarchetypeGroupId=io.github.sogis.archetype \
+       -DarchetypeVersion=0.1.0-SNAPSHOT \
+       -DarchetypeArtifactId=clean-modular-springboot-webapp
+```
+Achtung: Es drüfen keine Leerschlägen nach dem Backslash vorhanden sein.
 
 
 
