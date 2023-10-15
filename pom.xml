@@ -58,6 +58,7 @@
 
   <modules>
     <module>clean-modular-springboot-webapp</module>
+    <module>clean-modular-springboot-webapp-jar</module>
     <module>modular-springboot-webapp</module>
   </modules>
 
