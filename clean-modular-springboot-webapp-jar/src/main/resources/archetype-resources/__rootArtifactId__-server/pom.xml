@@ -10,7 +10,7 @@
   </parent>
 
   <artifactId>${artifactId}</artifactId>
-  <packaging>war</packaging>
+  <packaging>jar</packaging>
 
   <dependencies>
     <dependency>
@@ -92,6 +92,39 @@
       <activation>
         <activeByDefault>true</activeByDefault>
       </activation>
+      <build>
+        <plugins>
+          <!-- Das ist "maven build smell", weil das Entpacken vor dem Packen kommt. Eclipse und Maven reklamiert ggf. auch. -->
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-dependency-plugin</artifactId>
+            <executions>
+              <execution>
+                <id>unpack-gwt-war</id>
+                <phase>compile</phase>
+                <goals>
+                  <goal>unpack</goal>
+                </goals>
+                <configuration>
+                  <artifactItems>
+                    <artifactItem>
+                      <groupId>${project.groupId}</groupId>
+                      <artifactId>${rootArtifactId}-client</artifactId>
+                      <version>${project.version}</version>
+                      <type>war</type>
+                      <overWrite>true</overWrite>
+                      <outputDirectory>${project.build.directory}/classes/public</outputDirectory>
+                      <includes>${rootArtifactId}/</includes>
+                    </artifactItem>
+                  </artifactItems>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+
+     <!--
       <dependencies>
         <dependency>
           <groupId>${dollar}{project.groupId}</groupId>
@@ -101,6 +134,7 @@
           <scope>runtime</scope>
         </dependency>
       </dependencies>
+      -->
     </profile>
     <profile>
       <id>env-dev</id>

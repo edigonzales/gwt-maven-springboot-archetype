@@ -13,9 +13,25 @@ mvn archetype:generate \
        -DarchetypeVersion=0.1.0-SNAPSHOT \
        -DarchetypeArtifactId=clean-modular-springboot-webapp
 ```
+
+```
+mvn archetype:generate \
+       -DarchetypeCatalog=local \
+       -DarchetypeGroupId=io.github.sogis.archetype \
+       -DarchetypeVersion=0.1.0-SNAPSHOT \
+       -DarchetypeArtifactId=clean-modular-springboot-webapp-jar
+```
+
 Achtung: Es drüfen keine Leerschlägen nach dem Backslash vorhanden sein.
 
 
+```
+mvn spring-boot:run -pl *-server -am -Penv-dev
+```
+
+```
+mvn gwt:codeserver -pl *-client -am
+```
 
 gwt-maven-springboot-archetype
 ==============================
