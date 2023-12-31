@@ -26,11 +26,11 @@ Achtung: Es drüfen keine Leerschlägen nach dem Backslash vorhanden sein.
 
 
 ```
-mvn spring-boot:run -pl *-server -am -Penv-dev
+mvn gwt:codeserver -pl *-client -am
 ```
 
 ```
-mvn gwt:codeserver -pl *-client -am
+mvn spring-boot:run -pl *-server -am -Penv-dev
 ```
 
 gwt-maven-springboot-archetype

@@ -114,7 +114,7 @@
                       <type>war</type>
                       <overWrite>true</overWrite>
                       <outputDirectory>${project.build.directory}/classes/public</outputDirectory>
-                      <includes>${rootArtifactId}/</includes>
+                      <includes>app/</includes>
                     </artifactItem>
                   </artifactItems>
                 </configuration>
